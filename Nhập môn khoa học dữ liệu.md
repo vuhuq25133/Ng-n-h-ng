@@ -97,6 +97,8 @@ RapidMiner, Weka, Knime, Oracle Data Mining
 - Phân phối liên tục là một phân phối mà xác suất xảy ra như nhau cho mọi kết quả của biến ngẫu nhiên liên tục
 - Phân phối chuẩn là phân phối hình chuông cổ điển và hoàn toàn được xác định bởi 2 tham số: trung bình **(μ)** và độ lệch chuẩn của nó **(σ)**
 
+---
+
 ## Chương 2
 
 ### Câu 1: Trình bày 2 phương pháp thu thập dữ liệu? Giới thiệu 1 số cách thu thập dữ liệu cơ bản?
@@ -227,4 +229,113 @@ Trong đó `σ` là độ lệch chuẩn.
 7. Discretization
 8. Generalization
 9. Attribute Construction
+
+---
+
+# Chương 3: Trực quan hóa dữ liệu
+
+## Câu 1: Trực quan hóa dữ liệu để làm gì? Trình bày một số thư viện để trực quan hóa dữ liệu mà bạn biết?
+
+* Trực quan hóa dữ liệu là quá trình sử dụng các yếu tố hình ảnh như đồ thị, biểu đồ hoặc bản đồ để trình bày dữ liệu.
+* Quá trình này chuyển đổi dữ liệu phức tạp, có dung lượng lớn hoặc dữ liệu số thành hình ảnh trình bày trực quan, dễ xử lý hơn.
+
+**Một số thư viện trực quan hóa dữ liệu trong Python:**
+
+* matplotlib
+* seaborn
+* plotnine
+* bokeh
+* plotly
+* geoplotlib
+
+---
+
+## Câu 2: Trình bày các thao tác thường dùng khi trực quan hóa dữ liệu với matplotlib
+
+* Bước 1: Đọc dữ liệu từ các tệp lưu trữ *(csv, xlsx, ...)* từ cơ sở dữ liệu.
+* Bước 2: Làm sạch dữ liệu bằng việc loại bỏ các dữ liệu bị thiếu, dữ liệu bị sai, sử dụng các thư viện Python để thay thế các dữ liệu bị mất.
+* Bước 3: Tìm hiểu tập dữ liệu, vấn đề cần giải quyết để có thể lựa chọn biểu đồ phù hợp trong việc trực quan hóa dữ liệu.
+* Bước 4: Sử dụng biểu đồ trong thư viện matplotlib phù hợp với biểu đồ vừa chọn để trực quan hóa dữ liệu.
+
+---
+
+# Chương 4: Học máy
+
+## Câu 1: Học trong học máy là gì? Suy diễn là gì? Học máy là gì?
+
+* **Học trong học máy:** học các khả năng có thể từ tập dữ liệu có sẵn. 
+    * Một chương trình máy tính được gọi là ***"học tập"*** từ kinh nghiệm **E** để hoàn thành nhiệm vụ **T** với hiệu quả được đo bằng phép đánh giá **P**, nếu hiệu quả của nó khi thực hiện nhiệm vụ **T**, được đánh giá bởi **P**, cải thiện theo kinh nghiệm **E**.
+
+* **Suy diễn:** sử dụng những gì đã học được trong quá trình huấn luyện để đưa ra dự đoán cho dữ liệu mới.
+
+* **Học máy:** là khả năng của chương trình máy tính sử dụng kinh nghiệm, quan sát, hoặc dữ liệu trong quá khứ để cải thiện công việc của mình trong tương lai thay vì chỉ thực hiện theo các quy tắc đã được lập trình sẵn.
+
+---
+
+## Câu 2: Trình bày các cách đánh giá một mô hình học máy?
+
+* **Accuracy:** được định nghĩa là tỷ lệ phần trăm dự đoán đúng cho dữ liệu thử nghiệm.
+
+```
+accuracy = correct_predictions / all_predictions
+```
+
+* **Precision:** được định nghĩa là phần nhỏ của các ví dụ có liên quan trong số tất cả các ví dụ được dự đoán là thuộc một lớp nhất định.
+
+```
+precision = true_positives / (true_positives + false_positives)
+```
+
+* **Recall:** được định nghĩa là phần nhỏ của các ví dụ được dự đoán thuộc về một lớp so với tất cả các ví dụ thực sự thuộc về lớp đó.
+
+```
+recall = true_positives / (true_positives + false_negatives)
+```
+
+---
+
+## Câu 3: Overfitting và Underfitting là gì? Làm sao để giảm thiểu hai hiện tượng này?
+
+* **Overfitting (quá vừa):** là mô hình quá khít với dữ liệu, mô hình sẽ đúng trên tập huấn luyện nhưng cho kết quả rất tệ trên tập kiểm thử. Mô hình này thường có bias nhỏ và variance lớn.
+
+* **Underfitting (dưới vừa):** xảy ra khi lượng dữ liệu quá ít hoặc mô hình quá đơn giản để mô tả dữ liệu phức tạp.
+
+* ***Giảm thiểu overfitting:*** thu thập thêm dữ liệu, Data Augmentation, GAN.
+
+* ***Khắc phục underfitting:*** thay đổi thuật toán hoặc bổ sung thêm dữ liệu đầu vào.
+
+---
+
+## Câu 4: Độ lệch và phương sai là gì? Ảnh hưởng của chúng đến kết quả của mô hình như thế nào?
+
+* **Bias (độ lệch):** là sai khác giữa trung bình dự đoán của mô hình và giá trị chính xác đang cố gắng dự đoán. Bias cao khiến mô hình quá đơn giản và cho lỗi cao trên cả tập huấn luyện và kiểm thử.
+
+* **Variance (phương sai):** đặc trưng cho mức độ phân tán của giá trị dự đoán. Variance cao khiến mô hình khớp rất tốt với dữ liệu huấn luyện nhưng tổng quát kém trên dữ liệu mới.
+
+---
+
+## Câu 5: Trình bày các cách để biến đổi và trích chọn đặc trưng?
+
+* Đặc trưng phân loại
+* Đặc trưng văn bản
+* Đặc trưng hình ảnh
+
+---
+
+## Câu 6: Phân loại học máy (4 loại)? Hãy ví dụ một số thuật toán thường dùng thuộc các dạng học máy trên?
+
+**4 loại học máy:**
+
+* Học có giám sát
+* Học không giám sát
+* Học bán giám sát
+* Học kết hợp
+
+**Ví dụ thuật toán:**
+
+* Thuật toán dò tìm khuôn mặt: học có giám sát (tập huấn luyện gồm ảnh được gán nhãn là mặt người / không phải mặt người).
+* Thuật toán áp dụng trong các phần mềm chơi cờ: học kết hợp.
+
+---
+
 
