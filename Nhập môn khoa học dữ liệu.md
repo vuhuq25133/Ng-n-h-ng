@@ -338,4 +338,104 @@ recall = true_positives / (true_positives + false_negatives)
 
 ---
 
+# Chương 5: SQL
+
+## Câu 1: SQL là gì? Các chức năng của SQL? Trình bày một số câu lệnh thường dùng trong SQL
+
+* **SQL (Structured Query Language)** là ngôn ngữ truy vấn có cấu trúc. Nó là công cụ được thiết kế nhằm quản lý dữ liệu sử dụng trong nhiều lĩnh vực, cho phép truy cập và thực hiện các thao tác lấy, sửa đổi, trích xuất, tạo, xoá dữ liệu.
+
+**Các chức năng của SQL:**
+
+* Cho phép truy cập Database theo nhiều cách khác nhau thông qua các câu lệnh.
+* Truy cập dữ liệu từ cơ sở dữ liệu quan hệ.
+* Cho phép mô tả dữ liệu.
+* Định nghĩa và thao tác dữ liệu khi cần thiết trong Database.
+* Tạo, xoá Database và bảng.
+
+**Một số câu lệnh thường dùng trong SQL:**
+
+* `CREATE TABLE`: tạo bảng mới trong CSDL.
+* `INSERT`: chèn dữ liệu mới vào CSDL.
+* `UPDATE`: sửa đổi, cập nhật dữ liệu trong CSDL.
+* `DELETE`: xoá dữ liệu trong CSDL.
+* `SELECT`: trích xuất bản ghi từ một hoặc nhiều bảng.
+
+---
+
+## Câu 2: SQL là gì? NoSQL là gì? So sánh SQL và NoSQL (dạng bảng). SQL và NoSQL cái nào ưu việt hơn trong những trường hợp nào?
+
+**NoSQL là gì?**
+
+* NoSQL có nghĩa là *Not Only SQL*.
+* Không sử dụng mô hình dữ liệu quan hệ.
+* Mô hình lưu trữ dạng `key : value`.
+* Hệ thống lưu trữ phân tán.
+* CSDL không ràng buộc, phân tán, mã nguồn mở, mở rộng theo chiều ngang, dung lượng rất lớn, chịu tải và chịu lỗi cao, yêu cầu phần cứng thấp.
+
+### So sánh SQL và NoSQL
+
+| Tính năng                | SQL                                                                 | NoSQL                                                                           |
+| ------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Hiệu suất                | Kém hơn NoSQL do phải xử lý các mối quan hệ và ràng buộc            | Tốt hơn SQL do bỏ qua các ràng buộc                                             |
+| Mở rộng theo chiều ngang | Có thể nhưng phức tạp nếu đã có dữ liệu                             | Mở rộng dễ dàng                                                                 |
+| Tốc độ read/write        | Chậm hơn do đảm bảo ràng buộc và tính nhất quán                     | Nhanh hơn do bỏ qua ràng buộc, dữ liệu thường lưu RAM rồi ghi xuống HDD         |
+| Phần cứng                | Đòi hỏi phần cứng cao                                               | Không đòi hỏi phần cứng cao                                                     |
+| Thay đổi số node         | Cần shutdown hệ thống để đảm bảo nhất quán                          | Không cần shutdown do nhất quán cuối                                            |
+| Truy vấn và báo cáo      | Dễ truy vấn trực tiếp bằng SQL                                      | Chủ yếu qua giao diện ứng dụng                                                  |
+| Mở rộng dữ liệu          | Thêm cột cần khai báo trước                                         | Không cần khai báo trước                                                        |
+| Ứng dụng                 | Hệ thống cần tính nhất quán cao (tài chính, ngân hàng, chứng khoán) | Hệ thống dữ liệu lớn, chấp nhận nhất quán theo thời gian (báo chi, mạng xã hội) |
+
+---
+
+# Chương 6: Hệ khuyến nghị
+
+## Câu 1: Hệ khuyến nghị là gì? Giới thiệu 5–7 hệ thống khuyến nghị mà bạn biết?
+
+* Hệ khuyến nghị (*Recommender System*) là các công cụ và kỹ thuật phần mềm cung cấp các đề xuất đối tượng quan tâm cho người dùng khi lượng thông tin quá lớn.
+* Theo Ricci và cộng sự, hệ khuyến nghị cung cấp các đề xuất hỗ trợ quyết định của người dùng như mua sản phẩm nào, nghe nhạc gì, đọc tin gì.
+
+**Ví dụ hệ khuyến nghị:** Amazon, Netflix, YouTube, Lazada, Tiki, Shopee.
+
+---
+
+## Câu 2: Trình bày 2 phương pháp lọc dựa trên nội dung và lọc cộng tác trong bài toán khuyến nghị
+
+### Lọc cộng tác (Collaborative Filtering)
+
+* Đưa ra gợi ý dựa trên sở thích của những người dùng tương tự.
+* Hai dạng chính:
+
+  * **Memory-based**: dựa trên ghi nhớ toàn bộ dữ liệu.
+  * **Model-based**: dựa trên mô hình học máy để dự đoán.
+
+### Lọc dựa trên nội dung (Content-based Filtering)
+
+* Sử dụng thông tin bổ sung (features) của người dùng và sản phẩm.
+* Ví dụ: hệ thống gợi ý phim dựa trên độ tuổi, giới tính, thể loại, diễn viên, thời lượng phim.
+* Xây dựng mô hình từ các thông tin này để đề xuất cho người dùng mới.
+
+---
+
+## Câu 3: Trình bày một số hệ thống khuyến nghị lai và khuyến nghị dựa trên ngữ cảnh
+
+* **Khuyến nghị lai:** kết hợp lọc cộng tác và lọc dựa trên nội dung.
+
+* Ví dụ: Netflix đề xuất dựa trên thói quen xem của người dùng tương tự và đặc điểm phim đã đánh giá cao.
+
+* **Khuyến nghị dựa trên ngữ cảnh:** sử dụng thông tin ngữ cảnh (sở thích, lịch sử tìm kiếm, nguồn dữ liệu từ Google, Wikipedia) để cá nhân hoá đề xuất.
+
+---
+
+## Câu 4: Hệ thống khuyến nghị là gì? Các bước xây dựng một hệ thống khuyến nghị
+* Hệ thống khuyến nghị là các công cụ, kỹ thuật phần mềm cung cấp đề xuất về các hạng mục, nội dung đề xuất cho người dùng. Các đề xuất liên quan đến các quá trình ra quyết định khác nhau tại những thời điểm bất kỳ cho người dùng, ví dụ như mua hàng nào, nghe nhạc gì, đọc tin tức gì
+
+**Các bước xây dựng:**
+
+* Understand the Business: Hiểu doanh nghiệp.
+* Get the Data: Thu thập dữ liệu.
+* Explore, Clean, and Augment the Data: Khám phá, làm sạch, tăng cường dữ liệu.
+* Predict the Ranking: Dự đoán xếp hạng.
+* Visualize the Data: Trực quan hoá dữ liệu.
+* Iterate and Deploy Models: Lặp lại và triển khai mô hình.
+
 
