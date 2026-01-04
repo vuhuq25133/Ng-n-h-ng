@@ -1,4 +1,4 @@
-<img width="1285" height="410" alt="image" src="https://github.com/user-attachments/assets/ad545960-9904-4407-8fe7-a0bd71d28711" />## **Câu 1: Khoa học dữ liệu là gì? Ý nghĩa của khoa học dữ liệu? Trình bày một số công cụ khai phá dữ liệu mà bạn biết?**
+## **Câu 1: Khoa học dữ liệu là gì? Ý nghĩa của khoa học dữ liệu? Trình bày một số công cụ khai phá dữ liệu mà bạn biết?**
 
 ### **Khoa học dữ liệu là gì?**
 
