@@ -96,3 +96,135 @@ RapidMiner, Weka, Knime, Oracle Data Mining
 
 - Phân phối liên tục là một phân phối mà xác suất xảy ra như nhau cho mọi kết quả của biến ngẫu nhiên liên tục
 - Phân phối chuẩn là phân phối hình chuông cổ điển và hoàn toàn được xác định bởi 2 tham số: trung bình **(μ)** và độ lệch chuẩn của nó **(σ)**
+
+## Chương 2
+
+### Câu 1: Trình bày 2 phương pháp thu thập dữ liệu? Giới thiệu 1 số cách thu thập dữ liệu cơ bản?
+
+**Thu thập dữ liệu sơ cấp:**
+
+* Phỏng vấn
+* Quan sát
+* Khảo sát và bảng câu hỏi
+* Tập trung nhóm
+* Truyền miệng
+
+**Thu thập dữ liệu thứ cấp:**
+
+* Internet
+* Lưu trữ chính phủ
+* Thư viện
+
+**Các cách thu thập:** crawl, sử dụng API, ...
+
+---
+
+### Câu 2: Dữ liệu là gì? Có các vấn đề gì có thể xảy ra khi thao tác với dữ liệu? Làm sao để làm sạch dữ liệu?
+
+* Dữ liệu là một tập hợp các dữ kiện, chẳng hạn như số, từ, hình ảnh, nhằm đo lường, quan sát hoặc chỉ là mô tả về sự vật.
+
+**Các vấn đề có thể xảy ra khi thao tác với dữ liệu:**
+
+* Dữ liệu bị thiếu
+* Dữ liệu không nhất quán hoặc bị sai
+* Bị mất mát dữ liệu
+
+**Làm sạch dữ liệu:**
+
+* Bước 1: Loại bỏ các giá trị trùng lặp hoặc không liên quan.
+* Bước 2: Sửa lỗi cấu trúc.
+* Bước 3: Lọc các ngoại lệ không mong muốn.
+* Bước 4: Xử lý các dữ liệu bị thiếu.
+* Bước 5: Xác thực và QA.
+
+---
+
+### Câu 3: Dữ liệu là gì? Trình bày các phương pháp Co giãn và chuẩn hóa dữ liệu
+
+* Dữ liệu là một tập hợp các dữ kiện, chẳng hạn như số, từ, hình ảnh, nhằm đo lường, quan sát hoặc chỉ là mô tả về sự vật.
+
+**Các phương pháp co giãn và chuẩn hóa dữ liệu:**
+
+* **Scaling:** là biến đổi khoảng giá trị của dữ liệu về một khoảng đặc biệt như 0–100 hay 0–1, thường là 0–1.
+
+**Chuẩn hóa min-max (rescaling):**
+
+```
+X_new = (X_old - X_min) / (X_max - X_min)
+```
+
+Trong đó: `X_old` là giá trị ban đầu, `X_new` là giá trị sau khi chuẩn hóa, `X_min` là giá trị nhỏ nhất của đặc trưng, `X_max` là giá trị lớn nhất của đặc trưng.
+
+**Co giãn trung bình (mean normalization):**
+
+```
+X_new = (X_old - X_mean) / (X_max - X_min)
+```
+
+Trong đó `X_mean` là giá trị trung bình của các đặc trưng.
+
+**Chính quy hóa (standardisation):**
+
+```
+X_new = (X_old - X_mean) / σ
+```
+
+Trong đó `σ` là độ lệch chuẩn.
+
+---
+
+### Câu 4: Dữ liệu là gì? Trình bày các phương pháp lấy mẫu và lựa chọn đặc trưng cho dữ liệu
+
+* Dữ liệu là một tập hợp các dữ kiện, chẳng hạn như số, từ, hình ảnh, nhằm đo lường, quan sát hoặc chỉ là mô tả về sự vật.
+
+**Các phương pháp lấy mẫu:**
+
+* **Lấy mẫu xác suất (Probability Sampling):**
+
+  * Lấy mẫu ngẫu nhiên đơn giản (Simple Random Sampling)
+  * Lấy mẫu hệ thống (Systematic Sampling)
+  * Lấy mẫu phân tầng (Stratified Sampling)
+  * Lấy mẫu theo cụm (Cluster Sampling)
+
+* **Lấy mẫu phi xác suất (Non-Probability Sampling):**
+
+  * Lấy mẫu thuận tiện (Convenience Sampling)
+  * Lấy mẫu hạn ngạch (Quota Sampling)
+  * Lấy mẫu phán đoán (Judgment Sampling)
+  * Lấy mẫu bóng tuyết (Snowball Sampling)
+
+**Các phương pháp lựa chọn đặc trưng:**
+
+* Có giám sát:
+
+  * Filter Method
+  * Wrapper Methods
+  * Intrinsic Methods
+* Không giám sát
+
+---
+
+### Câu 5: Dữ liệu là gì? Chiều dữ liệu là gì? Trình bày các phương pháp giảm chiều dữ liệu và biến đổi dữ liệu
+
+* Dữ liệu là một tập hợp các dữ kiện, chẳng hạn như số, từ, hình ảnh, nhằm đo lường, quan sát hoặc chỉ là mô tả về sự vật.
+* Chiều dữ liệu là số lượng thuộc tính mà tập dữ liệu đó có.
+
+**Các phương pháp giảm chiều dữ liệu (Dimensionality Reduction):**
+
+1. Principal Component Analysis (PCA)
+2. Linear Discriminant Analysis (LDA)
+3. Kernel PCA
+4. Quadratic Discriminant Analysis (QDA)
+
+**Các phương pháp biến đổi dữ liệu (Data Transformation):**
+
+1. Revising
+2. Manipulation
+3. Separating
+4. Combining / Integrating
+5. Data smoothing
+6. Data Aggregation
+7. Discretization
+8. Generalization
+9. Attribute Construction
+
