@@ -1,4 +1,4 @@
-## **Câu 1: Khoa học dữ liệu là gì? Ý nghĩa của khoa học dữ liệu? Trình bày một số công cụ khai phá dữ liệu mà bạn biết?**
+<img width="1285" height="410" alt="image" src="https://github.com/user-attachments/assets/ad545960-9904-4407-8fe7-a0bd71d28711" />## **Câu 1: Khoa học dữ liệu là gì? Ý nghĩa của khoa học dữ liệu? Trình bày một số công cụ khai phá dữ liệu mà bạn biết?**
 
 ### **Khoa học dữ liệu là gì?**
 
@@ -80,56 +80,19 @@ RapidMiner, Weka, Knime, Oracle Data Mining
 * **Vector** là các đối tượng có thể được thêm vào với nhau để tạo thành vector mới và có thể được nhân với các đại lượng vô hướng (tức là số), cũng để tạo thành vector mới.
 
 ### **Các phép toán của vector:**
+<img width="1387" height="577" alt="image" src="https://github.com/user-attachments/assets/7df75265-cb17-4787-8f32-0effd3c12025" />
 
-* **Cộng:**
-  ( X(x_1, x_2) + Y(y_1, y_2) = X + Y (x_1 + y_1,; x_2 + y_2) )
+---
 
-* **Trừ:**
-  ( X(x_1, x_2) - Y(y_1, y_2) = X - Y (x_1 - y_1,; x_2 - y_2) )
+* **Ma trận** là một tập hợp các số hai chiều. Chúng ta sẽ biểu diễn ma trận dưới một danh sách các danh sách bên trong có cùng kích thước và đại diện cho một dạng danh sách các danh sách. Nếu A là ma trận thì A[i][j] là phần tử ở hàng thứ i và cột thứ j.
 
-* **Nhân vô hướng:**
-  ( K \times X(x_1, x_2) = X'(k \times x_1,; k \times x_2) )
-
-* **Nhân có hướng:**
-  ( X(x_1, x_2) \cdot Y(y_1, y_2) = x_1 \times y_1 + x_2 \times y_2 )
-
-* **Khoảng cách:**
-  ( |XY| = \sqrt{(y_1 - x_1)^2 + (y_2 - x_2)^2} )
-
-* **Ma trận** là một tập hợp các số hai chiều. Chúng ta sẽ biểu diễn ma trận dưới một danh sách các danh sách bên trong có cùng kích thước và đại diện cho một dạng danh sách các danh sách, với ngữ của ma trận. Nếu A là ma trận thì A[i][j] là phần tử ở hàng thứ i và cột thứ j.
-
-### **Cộng trừ hai ma trận**
-
-[
-[A_{ij}]*{m \times n} \pm [B*{ij}]*{m \times n} = [A*{ij} \pm B_{ij}]_{m \times n}
-]
-
-### **Tích hai ma trận**
-
-[
-C_{ij} = AB_{ij} = \sum_{k=1}^{p} A_{ik} B_{kj} ;;; \forall i = [1..m],; \forall j = [1..n]
-]
+<img width="1285" height="410" alt="image" src="https://github.com/user-attachments/assets/2b08a922-e73e-4581-8a7e-aa30e86b00e8" />
 
 ---
 
 ## **Câu 7: Trình bày công thức tính Xác suất có điều kiện và định lý Bayes? phân phối liên tục và phân phối chuẩn?**
 
-### **Công thức tính xác suất có điều kiện và định lý Bayes:**
+<img width="1498" height="538" alt="image" src="https://github.com/user-attachments/assets/f82109c1-609d-4a27-8e5d-3b380bb3ca84" />
 
-* **A và B độc lập**
-
-[
-P(A, B) = P(A)P(B)
-]
-
-* **B phụ thuộc xác suất A**
-
-[
-P(B|A) = \frac{P(A, B)}{P(A)}
-]
-
-* **Định lý Bayes:**
-
-[
-\Rightarrow P(A|B)P(B) = P(A \cap B) = P(B|A)P(A)
-]
+- Phân phối liên tục là một phân phối mà xác suất xảy ra như nhau cho mọi kết quả của biến ngẫu nhiên liên tục
+- Phân phối chuẩn là phân phối hình chuông cổ điển và hoàn toàn được xác định bởi 2 tham số: trung bình **(μ)** và độ lệch chuẩn của nó **(σ)**
